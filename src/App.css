@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(20, 20, 20, 0.12), 0 0 4px rgba(20, 20, 20, 0.1);
+  width: 370px;
+  height: 326px;
+}
+
+.header,
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item span {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.checkbox {
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  opacity: 0.6;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkbox:checked {
+  background-color: #facc15;
+  border-color: #facc15;
+}
+
+.checkbox:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox:hover {
+  border-color: #fbbf24;
+  transform: scale(1.1);
+}
+
+.hr {
+  border-top: 0.7px solid #d1d5db;
+  margin: 8px 16px;
+}
+
+.button {
+  margin-top: 16px;
+  width: 100%;
+  background-color: #facc15;
+  color: #1f2128;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fbbf24;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  z-index: 1001;
+}
